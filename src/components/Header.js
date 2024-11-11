@@ -1,6 +1,10 @@
 const Header = () => {
     return (
-        <h1>Header</h1>
+        <div className="shopee-top shopee-top--sticky">
+            <div>
+                
+            </div>
+        </div>
     )
 }
 
