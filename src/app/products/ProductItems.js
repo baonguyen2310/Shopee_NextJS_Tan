@@ -1,9 +1,16 @@
+import { useRouter } from 'next/navigation'
 
 
+const ProductItem = ({ product, message }) => {
+    // const product = props.product
+    // const message = props.message
 
-const ProductItem = ({ product }) => {
+    // const { product, message } = props
+
+    const router = useRouter()
+
     return (
-        <li>
+        <li onClick={ () => router.push(`/products/${product.id}`) }>
             <p>Name: {product.name}</p>
             <img src={product.imgurl} width={100} height={100} />
         </li>
