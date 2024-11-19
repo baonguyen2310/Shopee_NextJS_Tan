@@ -7,7 +7,8 @@ import Header from '@/components/Header'
 import { SearchBar } from '@/components/Header'
 
 import Footer from '@/components/Footer'
-import ProductItem from './ProductItem'
+// sữa tên
+import ProductItem from './ProductItems'
 
 import styles from './products.module.css'
 
@@ -44,6 +45,7 @@ const Products = () => {
             <Header />
             <h1 className='bg-primary text-primary-foreground'>Products</h1>
             <h1 className='text-center text-white bg-orange-500'>Hello</h1>
+            // viết searchbar ở đây
             <ul>
                 {
                     products.map((product) => {
