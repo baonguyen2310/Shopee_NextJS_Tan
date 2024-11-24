@@ -9,6 +9,7 @@ const Product = () => {
     const params = useParams()
 
     const [product, setProduct] = useState()
+    // lúc này đang undefine => đang load trang không load dữ liệu khi load xong dữ liệu 
     const [quantity, setQuantity] = useState(1)
 
     async function fetchProduct() {
@@ -16,6 +17,8 @@ const Product = () => {
         const product = await response.json()
         setProduct(product)
     }
+
+    // sau khi fecth xong thì nó sẽ là 1 cái object => true trang div đc hiển thị ra
 
     useEffect(() => {
         fetchProduct()
@@ -59,6 +62,7 @@ const Product = () => {
     return (
         <>
             {
+                // Thủ Thuật(Tip): khi product ban đầu là undefine => false thì cái div trong nó false luôn
                 product && (
                     <div>
                         <h1>Product Id: {product.id}</h1>
